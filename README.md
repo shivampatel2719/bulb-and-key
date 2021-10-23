@@ -1,6 +1,6 @@
 # Flickr Images Review System
 
-## Application url : https://applore.herokuapp.com/
+## Application url : https://bulb-and-key.herokuapp.com/
 
 # About App :
 
