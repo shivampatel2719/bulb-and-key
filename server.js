@@ -1,18 +1,26 @@
 const express = require('express')
 const path = require('path');
 
-require('dotenv').config()
+require('dotenv').config();
 
 const app = express();
 
 app.use(express.static(path.join(__dirname,"/dist/bulb-and-key/")));
 
-app.use(express.json())
+app.use(express.json());
 
-app.use(express.urlencoded({extended:false}))
+app.use(express.urlencoded({extended:false}));
 
 app.get('/', (req,res) => {
-  res.sendFile(path.join(__dirname,"/dist/bulb-and-key/index.html"))
+  res.sendFile(path.join(__dirname,"/dist/bulb-and-key/index.html"));
+});
+
+app.get('/review-page', (req,res) => {
+  res.sendFile(path.join(__dirname,"/dist/bulb-and-key/index.html"));
+});
+
+app.get('/review-image', (req,res) => {
+  res.sendFile(path.join(__dirname,"/dist/bulb-and-key/index.html"));
 });
 
 app.listen(process.env.PORT || 8080);
